@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laura Sakhong – Journalist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav class="nav">
+  <button class="hamburger" onclick="openMenu()" aria-label="Öppna meny">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── Menu overlay ── -->
+<div class="menu-overlay" id="menuOverlay">
+  <button class="close-btn" id="closeBtn" onclick="handleClose()" aria-label="Stäng meny">
+    <span></span><span></span>
+  </button>
+  <div class="menu-identity">
+    <h2>Laura Sakhong</h2>
+    <p>Journalist &amp; Reportage</p>
+  </div>
+  <nav class="menu-links">
+    <a href="#hero" onclick="closeMenu()">Om mig</a>
+    <a href="#carousel" onclick="closeMenu()">Bilder</a>
+    <a href="#competence" onclick="closeMenu()">Erfarenhet</a>
+    <a href="#gallery" onclick="closeMenu()">Galleri</a>
+    <a href="#contact" onclick="closeMenu()">Kontakt</a>
+  </nav>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <img
+      class="hero-img"
+      src="https://picsum.photos/seed/spongbob-portrait/520/660"
+      alt="Profilbild Laura Sakhong"
+    >
+    <div class="hero-text">
+      <h1>Laura<br>Sakhong</h1>
+      <p>Frilansjournalist med fokus på samhällsreportage och fördjupande intervjuer. Med erfarenhet från Sveriges ledande medier brinner jag för berättelser som verkligen gör skillnad – och som sätter ljuset på dem som annars inte hörs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Carousel ── -->
+<section class="carousel-section" id="carousel">
+  <div class="carousel-wrapper">
+    <button class="carousel-arrow" id="prevBtn" aria-label="Föregående bild">
+      <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>
+    </button>
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/seed/cs1/640/420" alt="Bild 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/seed/cs2/640/420" alt="Bild 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/seed/cs3/640/420" alt="Bild 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/seed/cs4/640/420" alt="Bild 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/seed/cs5/640/420" alt="Bild 5">
+        </div>
+      </div>
+    </div>
+    <button class="carousel-arrow" id="nextBtn" aria-label="Nästa bild">
+      <svg viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
+    </button>
+  </div>
+  <div class="carousel-dots" id="carouselDots">
+    <button class="dot active" onclick="goToSlide(0)" aria-label="Bild 1"></button>
+    <button class="dot" onclick="goToSlide(1)" aria-label="Bild 2"></button>
+    <button class="dot" onclick="goToSlide(2)" aria-label="Bild 3"></button>
+    <button class="dot" onclick="goToSlide(3)" aria-label="Bild 4"></button>
+    <button class="dot" onclick="goToSlide(4)" aria-label="Bild 5"></button>
+  </div>
+</section>
+
+<!-- ── Competence ── -->
+<section class="competence" id="competence">
+  <p class="section-label">Kompetens &amp; erfarenhet</p>
+
+  <!-- Göteborgsposten -->
+  <div class="org">
+    <h3>Göteborgsposten</h3>
+    <div class="org-grid">
+      <div class="org-videos">
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/gp-v1/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">Reportage: Staden och klimathotet</span>
+        </a>
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/gp-v2/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">Intervju: Framtidens Göteborg</span>
+        </a>
+      </div>
+      <div class="org-articles">
+        <a href="#" class="article-link">
+          <h4>Bostadskrisen – ett reportage om dem som faller mellan stolarna</h4>
+          <span class="article-meta">Göteborgsposten · 2024</span>
+        </a>
+        <a href="#" class="article-link">
+          <h4>Hamnen och framtiden: Så förändras Göteborg inifrån</h4>
+          <span class="article-meta">Göteborgsposten · 2023</span>
+        </a>
+      </div>
+      <img class="org-img" src="https://picsum.photos/seed/gp-img/400/533" alt="Göteborgsposten">
+    </div>
+  </div>
+
+  <!-- Sveriges Radio -->
+  <div class="org">
+    <h3>Sveriges Radio</h3>
+    <div class="org-grid">
+      <div class="org-videos">
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/sr-v1/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">P1: Kväll i studion – om migration</span>
+        </a>
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/sr-v2/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">Ekot: Riksdagsdebatt 2023</span>
+        </a>
+      </div>
+      <div class="org-articles">
+        <a href="#" class="article-link">
+          <h4>Röster från förorten: Tre år efter oroligheterna</h4>
+          <span class="article-meta">Sveriges Radio · 2024</span>
+        </a>
+        <a href="#" class="article-link">
+          <h4>Den tysta krisen i äldrevården</h4>
+          <span class="article-meta">Sveriges Radio · 2023</span>
+        </a>
+      </div>
+      <img class="org-img" src="https://picsum.photos/seed/sr-img/400/533" alt="Sveriges Radio">
+    </div>
+  </div>
+
+  <!-- Sveriges Television -->
+  <div class="org">
+    <h3>Sveriges Television</h3>
+    <div class="org-grid">
+      <div class="org-videos">
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/svt-v1/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">Aktuellt: Säkerhetspolitisk analys</span>
+        </a>
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/svt-v2/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">SVT Nyheter: Valnatten 2022</span>
+        </a>
+      </div>
+      <div class="org-articles">
+        <a href="#" class="article-link">
+          <h4>Granskning: Kommunernas dolda skulder</h4>
+          <span class="article-meta">SVT · 2024</span>
+        </a>
+        <a href="#" class="article-link">
+          <h4>Barnen som väntar: En dokumentär om asylprocessen</h4>
+          <span class="article-meta">SVT · 2023</span>
+        </a>
+      </div>
+      <img class="org-img" src="https://picsum.photos/seed/svt-img/400/533" alt="SVT">
+    </div>
+  </div>
+
+  <!-- Aftonbladet -->
+  <div class="org">
+    <h3>Aftonbladet</h3>
+    <div class="org-grid">
+      <div class="org-videos">
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/ab-v1/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">Expressreportage från Ukraina</span>
+        </a>
+        <a href="#" class="video-link">
+          <div class="video-thumb">
+            <img src="https://picsum.photos/seed/ab-v2/400/225" alt="">
+            <div class="play-icon">
+              <svg viewBox="0 0 56 56" fill="none">
+                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
+                <polygon points="22,18 40,28 22,38" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <span class="video-caption">Debatt: Pressfriheten under hot</span>
+        </a>
+      </div>
+      <div class="org-articles">
+        <a href="#" class="article-link">
+          <h4>Så lever de efter katastrofen – ett år senare</h4>
+          <span class="article-meta">Aftonbladet · 2024</span>
+        </a>
+        <a href="#" class="article-link">
+          <h4>Makten och medierna: Intervju med statsministern</h4>
+          <span class="article-meta">Aftonbladet · 2023</span>
+        </a>
+      </div>
+      <img class="org-img" src="https://picsum.photos/seed/ab-img/400/533" alt="Aftonbladet">
+    </div>
+  </div>
+</section>
+
+<!-- ── Masonry Gallery ── -->
+<section class="gallery-section" id="gallery">
+  <p class="section-label">Galleri</p>
+  <div class="masonry">
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg1/400/560" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg2/400/300" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg3/400/490" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg4/400/360" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg5/400/520" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg6/400/280" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg7/400/600" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg8/400/340" alt=""></div>
+    <div class="masonry-item"><img src="https://picsum.photos/seed/mg9/400/440" alt=""></div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer id="contact">
+  <a href="https://www.linkedin.com/in/laura-sakhong-11445b164/" target="_blank">
+    <!-- LinkedIn icon -->
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    LinkedIn
+  </a>
+  <a href="mailto:laurasakhong@icloud.com" target="_blank">
+    <!-- Email icon -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <polyline points="2,4 12,13 22,4"/>
+    </svg>
+    E-post
+  </a>
+</footer>
+
+<script>
+  // ── Menu ──
+  function openMenu() {
+    document.getElementById('menuOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    document.getElementById('menuOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleClose() {
+    const btn = document.getElementById('closeBtn');
+    btn.classList.add('spin');
+    btn.addEventListener('animationend', () => {
+      btn.classList.remove('spin');
+      closeMenu();
+    }, { once: true });
+  }
+
+  // ── Carousel ──
+  let current = 0;
+  const TOTAL = 5;
+  const track = document.getElementById('carouselTrack');
+  const dots = document.querySelectorAll('.dot');
+  let timer;
+
+  function goToSlide(index) {
+    current = ((index % TOTAL) + TOTAL) % TOTAL;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    restartTimer();
+  }
+
+  function restartTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goToSlide(current + 1), 4500);
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => goToSlide(current - 1));
+  document.getElementById('nextBtn').addEventListener('click', () => goToSlide(current + 1));
+
+  restartTimer();
+</script>
+</body>
+</html>

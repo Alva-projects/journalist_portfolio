@@ -1,14 +1,15 @@
 # journalist_portfolio
-This is a generic journalist portfolio that I will later customise. On going project.
+A portfolio template built for a journalist client, currently in progress.
 
-I'm using Claude integrated in the terminal for building the big structure. I'm manually adding videos, images and links that are unique for the journalist. For such static website I chose not to build in React.
+## About the project
+I designed and built the structure in collaboration with Claude (via terminal integration), focusing on layout, flow and user experience. Static content like videos, images and links are added manually by me. For a simple, fast-loading site like this, React would be overkill.
 
-Project consists is build up by:
-Navbar
-Hamburgermenu
-Hero
-Carousel
-Previous work
-Gallery
-Footer
+## Built with
+HTML, CSS, JavaScript
+
+##Structure
+Navbar · Hamburger menu · Hero · Carousel · Previous work · Gallery · Footer
+
+##AI workflow
+This project is an example of intentional AI use. I prompted Claude to handle the structural and design decisions while I maintained full ownership of the content and final output.
 

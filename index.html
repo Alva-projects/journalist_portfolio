@@ -183,30 +183,34 @@
     <h3>Sveriges Television</h3>
     <div class="org-grid">
       <div class="org-videos">
-        <a href="#" class="video-link">
-          <div class="video-thumb">
-            <img src="https://picsum.photos/seed/svt-v1/400/225" alt="">
-            <div class="play-icon">
+        <div class="video-link">
+          <div class="video-wrapper">
+            <video class="video-player">
+              <source src="video/(START 00_20) RAPPORT.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon video-overlay">
               <svg viewBox="0 0 56 56" fill="none">
                 <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
                 <polygon points="22,18 40,28 22,38" fill="white"/>
               </svg>
             </div>
           </div>
-          <span class="video-caption">Aktuellt: Säkerhetspolitisk analys</span>
-        </a>
-        <a href="#" class="video-link">
-          <div class="video-thumb">
-            <img src="https://picsum.photos/seed/svt-v2/400/225" alt="">
-            <div class="play-icon">
+          <span class="video-caption">Arbetsprov SVT</span>
+        </div>
+        <div class="video-link">
+          <div class="video-wrapper">
+            <video class="video-player">
+              <source src="video/Facebookbedragerier.mp4" type="video/mp4">
+            </video>
+            <div class="play-icon video-overlay">
               <svg viewBox="0 0 56 56" fill="none">
                 <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
                 <polygon points="22,18 40,28 22,38" fill="white"/>
               </svg>
             </div>
           </div>
-          <span class="video-caption">SVT Nyheter: Valnatten 2022</span>
-        </a>
+          <span class="video-caption">Facebookbedrägerier ökar – så blev SVT:s reporter lurad på konsertbiljetter</span>
+        </div>
       </div>
       <div class="org-articles">
         <a href="#" class="article-link">
@@ -227,10 +231,12 @@
     <h3>Aftonbladet</h3>
     <div class="org-grid">
       <div class="org-videos">
-        <a href="#" class="video-link">
-          <div class="video-thumb">
-            <img src="https://picsum.photos/seed/ab-v1/400/225" alt="">
-            <div class="play-icon">
+        <div class="video-link">
+          <div class="video-wrapper">
+            <video class="video-player">
+              <source src="" type="video/mp4">
+            </video>
+            <div class="play-icon video-overlay">
               <svg viewBox="0 0 56 56" fill="none">
                 <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
                 <polygon points="22,18 40,28 22,38" fill="white"/>
@@ -238,11 +244,13 @@
             </div>
           </div>
           <span class="video-caption">Expressreportage från Ukraina</span>
-        </a>
-        <a href="#" class="video-link">
-          <div class="video-thumb">
-            <img src="https://picsum.photos/seed/ab-v2/400/225" alt="">
-            <div class="play-icon">
+        </div>
+        <div class="video-link">
+          <div class="video-wrapper">
+            <video class="video-player">
+              <source src="" type="video/mp4">
+            </video>
+            <div class="play-icon video-overlay">
               <svg viewBox="0 0 56 56" fill="none">
                 <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
                 <polygon points="22,18 40,28 22,38" fill="white"/>
@@ -250,7 +258,7 @@
             </div>
           </div>
           <span class="video-caption">Debatt: Pressfriheten under hot</span>
-        </a>
+        </div>
       </div>
       <div class="org-articles">
         <a href="#" class="article-link">
@@ -344,6 +352,22 @@
   document.getElementById('nextBtn').addEventListener('click', () => goToSlide(current + 1));
 
   restartTimer();
+
+  // ── Video overlays ──
+  document.querySelectorAll('.video-overlay').forEach(overlay => {
+    const video = overlay.closest('.video-wrapper').querySelector('video');
+
+    overlay.addEventListener('click', () => {
+      video.setAttribute('controls', '');
+      overlay.style.display = 'none';
+      video.play();
+    });
+
+    video.addEventListener('ended', () => {
+      video.removeAttribute('controls');
+      overlay.style.display = '';
+    });
+  });
 </script>
 </body>
 </html>

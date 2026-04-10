@@ -484,12 +484,39 @@ footer svg {
   .hero-text p { max-width: 100%; }
   .org-grid { grid-template-columns: 1fr 1fr; }
   .org-img { grid-column: 1 / -1; aspect-ratio: 16/9; }
+  .section-label { text-align: center; }
+  .org h3 { text-align: center; }
 }
 
 @media (max-width: 700px) {
-  .carousel-viewport { width: 90vw; }
-  .carousel-slide { min-width: 90vw; height: 260px; }
+  /* Carousel: pilar läggs ovanpå bilden */
+  .carousel-wrapper {
+    position: relative;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  .carousel-viewport { width: 100%; }
+  .carousel-slide { min-width: 100%; height: 56vw; }
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255,255,255,0.8);
+    border-color: transparent;
+  }
+  #prevBtn { left: .75rem; }
+  #nextBtn { right: .75rem; }
+  .carousel-dots { margin-top: 1.4rem; }
+
+  /* Kompetens */
+  .competence { padding: 4rem 1.2rem; }
   .org-grid { grid-template-columns: 1fr; }
+  .video-caption { text-align: center; }
+  .article-link h4 { text-align: center; }
+  .article-meta { text-align: center; display: block; }
+
   .masonry { columns: 2; }
 }
 

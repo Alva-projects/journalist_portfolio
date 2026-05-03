@@ -37,7 +37,7 @@
   <div class="hero-inner">
     <img
       class="hero-img"
-      src="https://picsum.photos/seed/spongbob-portrait/520/660"
+      src="img/HEMSIDAN PROFIL.png"
       alt="Profilbild Laura Sakhong"
     >
     <div class="hero-text">
@@ -71,7 +71,7 @@
           <img src="img/IGA (IHECS 2023).png" alt="Bild 5">
         </div>
         <div class="carousel-slide">
-          <img src="img/Maja.png" alt="Bild 5">
+          <img src="img/Maja.png" alt="Bild 6">
         </div>
       </div>
     </div>
@@ -85,6 +85,7 @@
     <button class="dot" onclick="goToSlide(2)" aria-label="Bild 3"></button>
     <button class="dot" onclick="goToSlide(3)" aria-label="Bild 4"></button>
     <button class="dot" onclick="goToSlide(4)" aria-label="Bild 5"></button>
+    <button class="dot" onclick="goToSlide(5)" aria-label="Bild 6"></button>
   </div>
 </section>
 
@@ -101,32 +102,6 @@
   <div class="org">
     <h3>Jönköpings-posten</h3>
     <div class="org-grid">
-      <div class="org-videos">
-        <a href="#" class="video-link">
-          <div class="video-thumb">
-            <img src="https://picsum.photos/seed/gp-v1/400/225" alt="">
-            <div class="play-icon">
-              <svg viewBox="0 0 56 56" fill="none">
-                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
-                <polygon points="22,18 40,28 22,38" fill="white"/>
-              </svg>
-            </div>
-          </div>
-          <span class="video-caption">Reportage: Staden och klimathotet</span>
-        </a>
-        <a href="#" class="video-link">
-          <div class="video-thumb">
-            <img src="https://picsum.photos/seed/gp-v2/400/225" alt="">
-            <div class="play-icon">
-              <svg viewBox="0 0 56 56" fill="none">
-                <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.45)"/>
-                <polygon points="22,18 40,28 22,38" fill="white"/>
-              </svg>
-            </div>
-          </div>
-          <span class="video-caption">Intervju: Framtidens Jönköping</span>
-        </a>
-      </div>
       <div class="org-articles">
         <a href="https://www.jp.se/2024-07-28/sa-lever-malin-38-med-dolda-kvinnosjukdomen-springer-varje-dag/" target="_blank" class="article-link">
           <h4>Så lever Malin med den dolda kvinnosjukdomen (reporter)</h4>
@@ -141,7 +116,7 @@
           <span class="article-meta">Jönköpings-posten · 2024</span>
         </a>
       </div>
-      <img class="org-img" src="https://picsum.photos/seed/gp-img/400/533" alt="Jönköpings-posten">
+      <img class="org-img" src="img/Jönköpings-posten 2024.png" alt="Jönköpings-posten">
     </div>
   </div>
 
@@ -212,7 +187,7 @@
           <span class="article-meta">Aftonbladet · 2024</span>
         </a>
       </div>
-      <img class="org-img" src="https://picsum.photos/seed/ab-img/400/533" alt="Aftonbladet">
+      <img class="org-img" src="img/Little Jinder på Yaki-Da.png" alt="Aftonbladet">
     </div>
   </div>
 </section>
@@ -221,15 +196,16 @@
 <section class="gallery-section" id="gallery">
   <p class="section-label">Galleri</p>
   <div class="masonry">
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg1/400/560" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg2/400/300" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg3/400/490" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg4/400/360" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg5/400/520" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg6/400/280" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg7/400/600" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg8/400/340" alt=""></div>
-    <div class="masonry-item"><img src="https://picsum.photos/seed/mg9/400/440" alt=""></div>
+    <div class="masonry-item"><img src="img/Laura & Iga (IHECS 2023).png" alt=""></div>
+    <div class="masonry-item"><img src="img/JP.png" alt=""></div>
+    <div class="masonry-item"><img src="img/Examaensfirande för sociomerna 2024.png" alt=""></div>
+    <div class="masonry-item"><img src="img/Little Jinder på Yaki-Da.png" alt=""></div>
+    <div class="masonry-item"><img src="img/JP 2024.png" alt=""></div>
+    <div class="masonry-item"><img src="img/Hannes & Maja 2025  .png" alt=""></div>
+    <div class="masonry-item"><img src="img/HV71.png" alt=""></div>
+    <div class="masonry-item"><img src="img/Iga and Laura (IHECS 2023).png" alt=""></div>
+    <div class="masonry-item"><img src="img/Alva Lundberg 2026. png.png" alt=""></div>
+
   </div>
 </section>
 
@@ -273,7 +249,7 @@
 
   // ── Carousel ──
   let current = 0;
-  const TOTAL = 5;
+  const TOTAL = 6;
   const track = document.getElementById('carouselTrack');
   const dots = document.querySelectorAll('.dot');
   let timer;
@@ -287,7 +263,7 @@
 
   function restartTimer() {
     clearInterval(timer);
-    timer = setInterval(() => goToSlide(current + 1), 4500);
+    timer = setInterval(() => goToSlide(current + 1), 4000);
   }
 
   document.getElementById('prevBtn').addEventListener('click', () => goToSlide(current - 1));

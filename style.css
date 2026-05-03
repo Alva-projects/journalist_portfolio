@@ -228,6 +228,10 @@ body {
   display: block;
 }
 
+.carousel-slide:nth-child(even) img {
+  filter: grayscale(100%);
+}
+
 .carousel-arrow {
   background: none;
   border: 1.5px solid var(--black);
